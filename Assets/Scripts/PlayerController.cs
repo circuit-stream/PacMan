@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -9,11 +10,13 @@ public class PlayerController : MonoBehaviour
     public float pelletPowerUpDuration = 8;
     public Rigidbody characterRigidbody;
     public TMP_Text scoreText;
-    public TMP_Text gameOverText;
+    public GameObject gameOverText;
+    public GameObject gameWonText;
 
     private Vector3 movementDirection;
     private int currentScore;
     private float remainingPowerUpDuration;
+    private int remainingDots;
 
     private bool PowerUpActive => remainingPowerUpDuration > 0;
 
@@ -52,8 +55,14 @@ public class PlayerController : MonoBehaviour
         IncreaseScore(scoreForDot);
         Destroy(other.gameObject);
 
+        remainingDots--;
+        if (remainingDots <= 0)
+        {
+            enabled = false;
+            gameWonText.SetActive(true);
+        }
+
         // TODO: Play Animation / Sounds
-        // TODO: Win Game logic
     }
 
     private void PowerPelletCollected(Collider other)
@@ -96,5 +105,13 @@ public class PlayerController : MonoBehaviour
             CherryCollected(other);
         else if (other.CompareTag("Enemy"))
             EnemyCollision(other);
+    }
+
+    private void Awake()
+    {
+        gameOverText.SetActive(false);
+        gameWonText.SetActive(false);
+
+        remainingDots = GameObject.FindGameObjectsWithTag("Dot").Length;
     }
 }
