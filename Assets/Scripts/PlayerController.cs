@@ -1,12 +1,14 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float velocity = 3.5f;
     public Rigidbody characterRigidbody;
+    public TMP_Text scoreText;
 
     private Vector3 movementDirection;
-    public int currentScore;
+    private int currentScore;
 
     private void SetMovementDirection()
     {
@@ -30,10 +32,15 @@ public class PlayerController : MonoBehaviour
             characterRigidbody.rotation = Quaternion.LookRotation(movementDirection);
     }
 
+    private void IncreaseScore(int delta)
+    {
+        currentScore += delta;
+        scoreText.text = $"Score: {currentScore}";
+    }
+
     private void DotCollected(Collider other)
     {
-        Debug.Log("DotCollected");
-        currentScore++;
+        IncreaseScore(1);
         Destroy(other.gameObject);
 
         // TODO: Update UI

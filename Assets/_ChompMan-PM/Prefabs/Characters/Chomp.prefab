@@ -146,3 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 3.5
   characterRigidbody: {fileID: 6843122228224781803}
+  scoreText: {fileID: 0}
