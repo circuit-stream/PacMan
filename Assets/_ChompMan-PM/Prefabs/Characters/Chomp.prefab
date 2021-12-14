@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!143 &1164090342442655348
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7308235905141624706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!135 &7220977421686351351
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7308235905141624706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.55
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!1001 &7308235905141655842
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_Name
+      value: Chomp_Mesh Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0.000009179115
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.6155148
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.034521163
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.59659916
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.5844851
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.6190062
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 07b805cc50f7b21469eb77045e84e87c, type: 3}
+--- !u!1 &7308235905141624706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 07b805cc50f7b21469eb77045e84e87c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7308235905141655842}
+  m_PrefabAsset: {fileID: 0}
