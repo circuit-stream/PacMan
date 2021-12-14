@@ -11,9 +11,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost_Orange Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21,27 +29,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
+      value: -3.15
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.61169845
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.791091
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -49,10 +53,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 104.575005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
+      propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
@@ -80,13 +88,28 @@ PrefabInstance:
       value: 0.43635452
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
-      propertyPath: m_DirtyAABB
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 13700000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 70ba22ec1dded714d89bcdab0542907c, type: 2}
     m_RemovedComponents:
     - {fileID: 9500000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
+--- !u!1 &9163715946089988518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: cd46c4c845d21ed4690627267f2edc5d, type: 3}
+  m_PrefabInstance: {fileID: 9163715946090022662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &6488776829258408959
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163715946089988518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.43635452
+  m_Height: 1.0726548
+  m_Direction: 1
+  m_Center: {x: 0.008497089, y: 0.5903304, z: -0.071640596}

@@ -24,11 +24,40 @@ public class PlayerController : MonoBehaviour
     {
         SetMovementDirection();
         characterRigidbody.MovePosition(characterRigidbody.position + (movementDirection * velocity * Time.deltaTime));
-        characterRigidbody.rotation = Quaternion.LookRotation(movementDirection);
+
+        if (movementDirection != Vector3.zero)
+            characterRigidbody.rotation = Quaternion.LookRotation(movementDirection);
+    }
+
+    private void DotCollected(Collider other)
+    {
+        Debug.Log("DotCollected");
+    }
+
+    private void PowerPelletCollected(Collider other)
+    {
+        Debug.Log("PowerPelletCollected");
+    }
+
+    private void CherryCollected(Collider other)
+    {
+        Debug.Log("CherryCollected");
+    }
+
+    private void EnemyCollision(Collider other)
+    {
+        Debug.Log("EnemyCollision");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter!");
+        if (other.CompareTag("Dot"))
+            DotCollected(other);
+        else if (other.CompareTag("PowerPellet"))
+            PowerPelletCollected(other);
+        else if (other.CompareTag("Cherry"))
+            CherryCollected(other);
+        else if (other.CompareTag("Enemy"))
+            EnemyCollision(other);
     }
 }

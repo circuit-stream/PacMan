@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dot
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfa846214fe98954ca47d9a694a75cf4, type: 3}
+      propertyPath: m_TagString
+      value: Dot
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfa846214fe98954ca47d9a694a75cf4, type: 3}
       propertyPath: m_RootOrder
       value: 0
