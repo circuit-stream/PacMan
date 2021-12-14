@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float velocity = 3.5f;
+    public int scoreForDot = 10;
+    public int scoreForEnemy = 100;
     public Rigidbody characterRigidbody;
     public TMP_Text scoreText;
 
@@ -40,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private void DotCollected(Collider other)
     {
-        IncreaseScore(1);
+        IncreaseScore(scoreForDot);
         Destroy(other.gameObject);
 
         // TODO: Update UI
