@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         SetMovementDirection();
-        characterRigidbody.MovePosition(characterRigidbody.position + movementDirection * velocity);
+        characterRigidbody.MovePosition(characterRigidbody.position + (movementDirection * velocity * Time.deltaTime));
         characterRigidbody.rotation = Quaternion.LookRotation(movementDirection);
     }
 }
