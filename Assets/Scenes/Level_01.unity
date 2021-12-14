@@ -10437,6 +10437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a9089b493f30c40a13015c0c8382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 3.5
   characterController: {fileID: 1684772736}
 --- !u!1001 &1698295572
 PrefabInstance:
