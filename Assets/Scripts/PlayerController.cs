@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public int scoreForEnemy = 100;
     public Rigidbody characterRigidbody;
     public TMP_Text scoreText;
+    public TMP_Text gameOverText;
 
     private Vector3 movementDirection;
     private int currentScore;
@@ -45,8 +46,8 @@ public class PlayerController : MonoBehaviour
         IncreaseScore(scoreForDot);
         Destroy(other.gameObject);
 
-        // TODO: Update UI
         // TODO: Play Animation / Sounds
+        // TODO: Win Game logic
     }
 
     private void PowerPelletCollected(Collider other)
@@ -62,7 +63,8 @@ public class PlayerController : MonoBehaviour
 
     private void EnemyCollision(Collider other)
     {
-        Debug.Log("EnemyCollision");
+        enabled = false;
+        gameOverText.gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
