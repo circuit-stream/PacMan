@@ -26,4 +26,9 @@ public class PlayerController : MonoBehaviour
         characterRigidbody.MovePosition(characterRigidbody.position + (movementDirection * velocity * Time.deltaTime));
         characterRigidbody.rotation = Quaternion.LookRotation(movementDirection);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("OnTriggerEnter!");
+    }
 }
