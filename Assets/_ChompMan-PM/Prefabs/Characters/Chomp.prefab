@@ -145,5 +145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 3.5
+  scoreForDot: 10
+  scoreForEnemy: 100
+  pelletPowerUpDuration: 8
   characterRigidbody: {fileID: 6843122228224781803}
   scoreText: {fileID: 0}
+  gameOverText: {fileID: 0}

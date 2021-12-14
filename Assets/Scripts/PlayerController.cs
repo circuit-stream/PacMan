@@ -6,12 +6,16 @@ public class PlayerController : MonoBehaviour
     public float velocity = 3.5f;
     public int scoreForDot = 10;
     public int scoreForEnemy = 100;
+    public float pelletPowerUpDuration = 8;
     public Rigidbody characterRigidbody;
     public TMP_Text scoreText;
     public TMP_Text gameOverText;
 
     private Vector3 movementDirection;
     private int currentScore;
+    private float remainingPowerUpDuration;
+
+    private bool PowerUpActive => remainingPowerUpDuration > 0;
 
     private void SetMovementDirection()
     {
@@ -28,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        remainingPowerUpDuration -= Time.deltaTime;
+
         SetMovementDirection();
         characterRigidbody.MovePosition(characterRigidbody.position + (movementDirection * velocity * Time.deltaTime));
 
@@ -52,19 +58,32 @@ public class PlayerController : MonoBehaviour
 
     private void PowerPelletCollected(Collider other)
     {
-        Debug.Log("PowerPelletCollected");
+        remainingPowerUpDuration = pelletPowerUpDuration;
+        Destroy(other.gameObject);
+
+        // TODO: Play Animation / Sounds / Change enemies color
     }
 
     private void CherryCollected(Collider other)
     {
         Debug.Log("CherryCollected");
-        // Homework :)
+        // TODO: Cherry collection logic
     }
 
     private void EnemyCollision(Collider other)
     {
-        enabled = false;
-        gameOverText.gameObject.SetActive(true);
+        if (PowerUpActive)
+        {
+            IncreaseScore(scoreForEnemy);
+            Destroy(other.gameObject);
+
+            // TODO: Return enemy to center instead of killing it
+        }
+        else
+        {
+            enabled = false;
+            gameOverText.gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
