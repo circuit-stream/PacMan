@@ -9,7 +9,15 @@ public class PlayerController : MonoBehaviour
     {
         float xAxis = Input.GetAxis("Horizontal");
         float zAxis = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(xAxis, 0, zAxis).normalized;
+
+        Vector3 movement;
+
+        if (xAxis == 0 && zAxis == 0) return;
+
+        if (Mathf.Abs(xAxis) >= Mathf.Abs(zAxis))
+            movement = new Vector3(xAxis, 0, 0).normalized;
+        else
+            movement = new Vector3(0, 0, zAxis).normalized;
 
         characterController.SimpleMove(movement * velocity);
     }
