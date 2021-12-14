@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody characterRigidbody;
 
     private Vector3 movementDirection;
+    public int currentScore;
 
     private void SetMovementDirection()
     {
@@ -32,6 +33,11 @@ public class PlayerController : MonoBehaviour
     private void DotCollected(Collider other)
     {
         Debug.Log("DotCollected");
+        currentScore++;
+        Destroy(other.gameObject);
+
+        // TODO: Update UI
+        // TODO: Play Animation / Sounds
     }
 
     private void PowerPelletCollected(Collider other)
@@ -42,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private void CherryCollected(Collider other)
     {
         Debug.Log("CherryCollected");
+        // Homework :)
     }
 
     private void EnemyCollision(Collider other)
