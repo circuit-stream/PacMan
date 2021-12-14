@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float velocity = 3.5f;
-    public CharacterController characterController;
+    public Rigidbody characterRigidbody;
 
     private Vector3 movementDirection;
 
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         SetMovementDirection();
-        characterController.SimpleMove(movementDirection * velocity);
-        transform.rotation = Quaternion.LookRotation(movementDirection);
+        characterRigidbody.MovePosition(characterRigidbody.position + movementDirection * velocity);
+        characterRigidbody.rotation = Quaternion.LookRotation(movementDirection);
     }
 }
